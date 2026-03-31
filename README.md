@@ -8,8 +8,11 @@
 2. 从用户视角看，项目收集了哪些信息，并如何使用这些信息。
 3. 用户若希望规避或降低信息收集，应如何做。
 4. agent memory 机制是怎么实现的。
-5. 该项目与同类产品相比，架构亮点和差异在哪里。
+5. 该项目自身的程序架构亮点是什么。
 6. 除上述要求外，还补充了权限、compact、MCP、remote、swarm 等额外发现。
+7. 对 `src/components/` 中各组件族、关键子组件以及叶子组件子函数进行专项拆解。
+8. 该项目与 `Codex`、`Gemini CLI`、`Aider`、`Cursor` 等同类产品相比，有哪些差异。
+9. 相关结论分别对应哪些代码证据和外部公开资料。
 
 总判断先放在这里：
 
@@ -32,42 +35,33 @@
 
 - [第四章：Agent Memory 机制是怎么做的](./analysis/04-agent-memory.md)
 
-### 第四部分：亮点与对比
+### 第四部分：程序架构及亮点
 
-- [第五章：程序架构的亮点，以及与同类产品的不同](./analysis/05-differentiators-and-comparison.md)
+- [第五章：程序架构及亮点](./analysis/05-differentiators-and-comparison.md)
 
 ### 第五部分：扩展分析
 
 - [第六章：额外探索与补充发现](./analysis/06-extra-findings.md)
 
-### 第六部分：证据与资料
+### 第六部分：组件体系详解
+
+- [组件详解（一）：组件总览、分层与依赖主干](./analysis/components/01-component-architecture-overview.md)
+- [组件详解（二）：核心交互组件与消息/输入主链路](./analysis/components/02-core-interaction-components.md)
+- [组件详解（三）：平台能力组件与控制面实现](./analysis/components/03-platform-components.md)
+- [组件详解（四）：组件索引、长尾组件与目录映射](./analysis/components/04-component-index.md)
+- [组件详解（五）：核心组件函数级实现拆解](./analysis/components/05-function-level-core-walkthrough.md)
+- [组件详解（六）：平台控制面函数级实现拆解](./analysis/components/06-function-level-platform-walkthrough.md)
+- [组件详解（七）：叶子组件与子函数实现拆解](./analysis/components/07-function-level-leaf-walkthrough.md)
+
+### 第七部分：同类产品对比
+
+- [第八章：同类产品对比](./analysis/08-competitive-comparison.md)
+- [附录A：外部对比资料](./analysis/08-reference-comparison-sources.md)
+
+### 第八部分：证据与资料
 
 - [第七章：代码证据索引](./analysis/07-code-evidence-index.md)
-- [第八章：外部对比资料](./analysis/08-reference-comparison-sources.md)
 
-### 第七部分：总结
+### 第九部分：总结
 
 - [第九章：总结结论](./analysis/09-final-summary.md)
-
-## 阅读建议
-
-如果只想快速把握结论，建议按这个顺序阅读：
-
-1. [第一章：软件架构与程序入口](./analysis/01-architecture-overview.md)
-2. [第二章：从用户角度看，项目收集了哪些信息，以及如何使用](./analysis/02-user-data-and-usage.md)
-3. [第四章：Agent Memory 机制是怎么做的](./analysis/04-agent-memory.md)
-4. [第五章：程序架构的亮点，以及与同类产品的不同](./analysis/05-differentiators-and-comparison.md)
-5. [第九章：总结结论](./analysis/09-final-summary.md)
-
-如果要做源码复核，建议直接看：
-
-1. [第七章：代码证据索引](./analysis/07-code-evidence-index.md)
-2. 再跳转到对应源码文件
-
-## 总结
-
-整个分析的最终结论是：
-
-- 这是一个具备平台属性的本地 agent runtime，而不是一次性问答工具。
-- 它的 memory、transcript、compact、permission、MCP、remote、swarm 被统一进了一套执行内核。
-- 这带来了很强的工程能力，也意味着用户和组织需要更严格地管理信息输入、持久化策略与远程能力开关。
