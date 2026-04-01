@@ -146,3 +146,8 @@ claude-code-analysis/
 > 2. **禁止商业使用**：禁止将本仓库内容用于任何商业目的，或以此绕过、破坏 Claude Code 的安全机制与用户协议。
 > 3. **免责声明**：本仓库作者不对因参考本文档而产生的任何直接或间接损失负责。如有任何合规疑虑，请以 Anthropic 官方文档与用户协议为准。
 > 4. **如需删除**：若 Anthropic 认为本仓库内容侵犯其合法权益，请通过 Issue 联系，我们将在核实后第一时间进行删除处理。
+
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/image?repos=liuup/claude-code-analysis&type=date&legend=top-left)](https://www.star-history.com/?repos=liuup%2Fclaude-code-analysis&type=date&legend=top-left)
